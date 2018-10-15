@@ -10,6 +10,8 @@ var Todo = todoimpl{}
 
 type todoimpl struct {}
 
+// ShowAccount godoc
+// @Param status path string true "input status"
 // @Summary Show a todo by staus
 // @Description get string by status
 // @Success 200 {object} model.Todo

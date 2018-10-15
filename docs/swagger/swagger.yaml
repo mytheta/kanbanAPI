@@ -17,23 +17,23 @@ definitions:
     required:
     - title
     type: object
-host: petstore.swagger.io
+host: localhost:9000
 info:
-  contact:
-    email: support@swagger.io
-    name: API Support
-    url: http://www.swagger.io/support
-  description: This is a sample server Petstore server.
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
-  termsOfService: http://swagger.io/terms/
+  contact: {}
+  description: This is a kanbanAPI
+  license: {}
   title: Swagger Example API
   version: "1.0"
 paths:
   /todo/{status}:
     get:
       description: get string by status
+      parameters:
+      - description: input status
+        in: path
+        name: status
+        required: true
+        type: string
       responses:
         "200":
           description: OK
