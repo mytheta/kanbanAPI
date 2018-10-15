@@ -10,6 +10,10 @@ var Todo = todoimpl{}
 
 type todoimpl struct {}
 
+// @Summary Show a todo by staus
+// @Description get string by status
+// @Success 200 {object} model.Todo
+// @Router /todo/{status} [get]
 func(t *todoimpl) FindByStatus(c *gin.Context) {
 	status := c.Param("status")
 

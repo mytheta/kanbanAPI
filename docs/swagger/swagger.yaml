@@ -1,0 +1,44 @@
+basePath: /
+definitions:
+  model.Todo:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      status:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+    required:
+    - title
+    type: object
+host: petstore.swagger.io
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server Petstore server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /todo/{status}:
+    get:
+      description: get string by status
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Todo'
+            type: object
+      summary: Show a todo by staus
+swagger: "2.0"
